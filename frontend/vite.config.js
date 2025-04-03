@@ -10,9 +10,13 @@ export default defineConfig({
     react()
 
   ],
+  server: {
+    port: process.env.PORT || 10000, // Use Render's port or default to 10000
+    host: '0.0.0.0'
+  },
   resolve: {
     alias: {
-      '@': '/src', 
+      // '@': '/src', 
       "@": path.resolve(__dirname, "src") // Ensure '@' is mapped to your src directory
     },
   },
