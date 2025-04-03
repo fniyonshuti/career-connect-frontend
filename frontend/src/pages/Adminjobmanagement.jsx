@@ -29,7 +29,7 @@ export default function JobManagement() {
   const fetchJobs = async () => {
     try {
       const token = localStorage.getItem("authToken");
-      const response = await axios.get("http://localhost:5000/api/jobs", {
+      const response = await axios.get("https://career-connect-backend-xyxu.onrender.com/api/jobs", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setJobs(response.data);
@@ -45,7 +45,7 @@ export default function JobManagement() {
     if (!window.confirm("Are you sure you want to delete this job?")) return;
     try {
       const token = localStorage.getItem("authToken");
-      await axios.delete(`http://localhost:5000/api/jobs/${id}`, {
+      await axios.delete(`https://career-connect-backend-xyxu.onrender.com/api/jobs/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setJobs(jobs.filter((job) => job._id !== id));
@@ -59,7 +59,7 @@ export default function JobManagement() {
     try {
       const token = localStorage.getItem("authToken");
       await axios.patch(
-        `http://localhost:5000/api/jobs/${id}`,
+        `https://career-connect-backend-xyxu.onrender.com/api/jobs/${id}`,
         { isApproved: action === "approve" },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -77,7 +77,7 @@ export default function JobManagement() {
     updatedJob.isFeatured = !updatedJob.isFeatured;
     try {
       const token = localStorage.getItem("authToken");
-      await axios.put(`http://localhost:5000/api/jobs/${id}`, updatedJob, {
+      await axios.put(`https://career-connect-backend-xyxu.onrender.com/api/jobs/${id}`, updatedJob, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchJobs();
@@ -113,11 +113,11 @@ export default function JobManagement() {
     try {
       const token = localStorage.getItem("authToken");
       if (editingJob) {
-        await axios.put(`http://localhost:5000/api/jobs/${editingJob._id}`, jobData, {
+        await axios.put(`https://career-connect-backend-xyxu.onrender.com/api/jobs/${editingJob._id}`, jobData, {
           headers: { Authorization: `Bearer ${token}` },
         });
       } else {
-        await axios.post("http://localhost:5000/api/jobs", jobData, {
+        await axios.post("https://career-connect-backend-xyxu.onrender.com/api/jobs", jobData, {
           headers: { Authorization: `Bearer ${token}` },
         });
       }

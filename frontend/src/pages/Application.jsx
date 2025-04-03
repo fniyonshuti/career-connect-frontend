@@ -8,7 +8,7 @@ const UserStatusTable = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/applications/");
+        const response = await axios.get("https://career-connect-backend-xyxu.onrender.com/api/applications/");
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);

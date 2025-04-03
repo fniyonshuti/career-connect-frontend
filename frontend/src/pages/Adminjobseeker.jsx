@@ -18,7 +18,7 @@ export default function JobSeeker() {
   const fetchJobSeekers = async () => {
     try {
       const token = localStorage.getItem("authToken");
-      const response = await axios.get("http://localhost:5000/api/job-seekers", {
+      const response = await axios.get("https://career-connect-backend-xyxu.onrender.com/api/job-seekers", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setJobSeekers(response.data);
@@ -33,7 +33,7 @@ export default function JobSeeker() {
   const fetchApplications = async (jobSeekerId) => {
     try {
       const token = localStorage.getItem("authToken");
-      const response = await axios.get(`http://localhost:5000/api/applications/${jobSeekerId}`, {
+      const response = await axios.get(`https://career-connect-backend-xyxu.onrender.com/api/applications/${jobSeekerId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setApplications(response.data);
@@ -46,7 +46,7 @@ export default function JobSeeker() {
   const fetchAnalytics = async () => {
     try {
       const token = localStorage.getItem("authToken");
-      const response = await axios.get("http://localhost:5000/api/analytics/job-seekers", {
+      const response = await axios.get("https://career-connect-backend-xyxu.onrender.com/api/analytics/job-seekers", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setAnalytics(response.data);
@@ -60,7 +60,7 @@ export default function JobSeeker() {
     try {
       const token = localStorage.getItem("authToken");
       await axios.patch(
-        `http://localhost:5000/api/job-seekers/verify/${jobSeekerId}`,
+        `https://career-connect-backend-xyxu.onrender.com/api/job-seekers/verify/${jobSeekerId}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
