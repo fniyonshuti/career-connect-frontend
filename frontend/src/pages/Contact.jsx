@@ -37,13 +37,7 @@ export default function ContactSection() {
                 <p className="text-gray-700">+250790235869</p>
               </div>
   
-              {/* Social Media */}
-              <div className="flex space-x-4 mt-6">
-                <a href="#" className="text-blue-600 hover:text-blue-800 text-2xl">🌐</a>
-                <a href="#" className="text-blue-600 hover:text-blue-800 text-2xl">📘</a>
-                <a href="#" className="text-blue-600 hover:text-blue-800 text-2xl">🐦</a>
-              </div>
-            </div>
+              
   
             {/* Right: Contact Form */}
             <div className="bg-white p-8 shadow-lg rounded-lg">
