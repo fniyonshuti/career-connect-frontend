@@ -3,7 +3,7 @@ import { FaUser, FaChartBar, FaShoppingCart, FaClipboardList, FaBriefcase, FaBel
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import UsersList from "./UsersList";
 import Employers from "./EmployerList";
-import JobManagement from "./AdminJobManagement"; 
+import JobManagement from "./Adminjobmanagement"; 
 import JobSeeker from "./Adminjobseeker";
 
 const data = [
