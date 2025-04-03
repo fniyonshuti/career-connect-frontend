@@ -30,7 +30,7 @@ const Login = () => {
         navigate("/employer");
       } else {
         // Redirect to a default page or show an error
-        navigate("/"); 
+        navigate("/jobseeker"); 
       }
     } catch (error) {
       setErrorMessage("Invalid credentials. Please try again.");
